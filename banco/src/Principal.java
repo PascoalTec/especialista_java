@@ -1,22 +1,26 @@
-import com.algaworks.financeira.modelo.Fazenda;
-import com.algaworks.financeira.modelo.Funcionario;
-import com.algaworks.financeira.modelo.Industria;
-import com.algaworks.financeira.modelo.ParceiroFinanceiro;
-import com.algaworks.financeira.servico.ServicoFinanciamento;
+import com.algaworks.locadora.Locacao;
+import com.algaworks.locadora.Notebook;
+import com.algaworks.locadora.Precificacao;
+import com.algaworks.locadora.PrecificacaoPorDia;
+import com.algaworks.locadora.PrecificacaoPorHora;
+import com.algaworks.locadora.Seguro;
+import com.algaworks.locadora.SeguroItau;
+import com.algaworks.locadora.SeguroSantander;
 
 public class Principal {
 
     public static void main(String[] args) {
         
-        var servicoFinanciamento = new ServicoFinanciamento();
-        var fazenda = new Fazenda("Fazenda Dona Benedita", 5_000_000, 5);
-        var industria = new Industria("Alimentos da Vovó", 5_000_000, false);
-        var parceiro = new ParceiroFinanceiro("Capital ABC", 2_000_000);
-        var funcionario = new Funcionario("João da Silva", 18_000);
+    Notebook notebook = new Notebook("Macbook Pro i7 16gb", 5, 100);
+    Precificacao precificacao = new PrecificacaoPorHora();
+    Seguro seguro = new SeguroItau();
 
-        servicoFinanciamento.solicitarFinanciamento(funcionario, 90_000);
-        servicoFinanciamento.solicitarFinanciamento(fazenda, 600_000);
-        servicoFinanciamento.solicitarFinanciamento(industria, 400_000);
+    Locacao locacao = new Locacao(notebook, precificacao, seguro);
+    double valorDevido = locacao.calcularValorDevido(10);
+
+    System.out.printf("Valor a pagar R$%.2f%n", valorDevido);
+
     }
-
 }
+
+
