@@ -2,6 +2,10 @@ import java.util.HashSet;
 import java.util.Iterator;
 import java.util.Set;
 
+import com.algaworks.comercial.Cliente;
+import com.algaworks.comercial.ItemVenda;
+import com.algaworks.comercial.Venda;
+
 public class Principal {
 
     public static void main(String[] args) {
