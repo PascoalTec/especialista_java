@@ -1,7 +1,6 @@
 package com.algaworks.desafio_optional;
 
 import java.util.Objects;
-import java.util.Optional;
 
 public class Principal {
     

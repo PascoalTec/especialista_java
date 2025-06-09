@@ -1,9 +1,6 @@
 package com.algaworks.date_time;
 
 import java.time.LocalDate;
-import java.time.LocalDateTime;
-import java.time.temporal.ChronoField;
-import java.util.Locale;
 
 public class Principal {
     

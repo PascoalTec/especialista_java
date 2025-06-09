@@ -1,6 +1,5 @@
 package com.algaworks.desafio_classes_aninhadas.vendas;
 
-import java.io.ObjectInputFilter.Status;
 import java.math.BigDecimal;
 import java.util.ArrayList;
 import java.util.Collections;
