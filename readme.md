@@ -10,6 +10,9 @@ Com ele você só pode pegar o resultado se ele existir e tem que testar de algu
 
 #### map: 
 
+É uma operação intermediária que transforma cada elemento do stream em um novo elemento de um novo stream
+
+passa-se uma function para o metodo map e essa function que vai definir como queremos fazer essa transformação, e ela será mapeada durante o processamento do pipeline
 
 
 ### stream()
