@@ -22,3 +22,9 @@ Stream é uma sequencia de elementos onde existe uma origem de dados.
 Com ela, podemos fazer iterações, operações nos elementos que são exatamente os mesmos na lista que está vinculada
 
 NÃO ARMAZENA OS ELEMENTOS, ELE É APENAS UMA FORMA DE PROCESSAR OS ELEMENTOS DA FONTE DE DADOS
+
+
+
+### serialVersionUID:
+
+

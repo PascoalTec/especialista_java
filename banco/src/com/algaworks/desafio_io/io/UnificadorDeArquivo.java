@@ -1,6 +1,7 @@
 package com.algaworks.desafio_io.io;
 
 import java.io.*;
+import java.nio.file.Path;
 import java.util.Arrays;
 import java.util.Comparator;
 import java.util.List;
@@ -9,7 +10,7 @@ import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
 public class UnificadorDeArquivo {
-    
+
     private final File pastaArquivosFragmentados;
     private final File arquivoUnificado;
     private final String prefixoArquivosFragmentados;
@@ -22,6 +23,15 @@ public class UnificadorDeArquivo {
         this.pastaArquivosFragmentados = pastaArquivosFragmentados;
         this.arquivoUnificado = arquivoUnificado;
         this.prefixoArquivosFragmentados = prefixoArquivosFragmentados;
+    }
+
+    public UnificadorDeArquivo(Path of, Path of2, String prefixoArquivosFragmentados2) {
+        Objects.requireNonNull(of);
+        Objects.requireNonNull(of2);
+        Objects.requireNonNull(prefixoArquivosFragmentados2);
+        this.arquivoUnificado = of2.toFile();
+        this.pastaArquivosFragmentados = of.toFile();
+        this.prefixoArquivosFragmentados = prefixoArquivosFragmentados2;
     }
 
     public void unificar() throws IOException {

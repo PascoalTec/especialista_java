@@ -1,28 +1,32 @@
 package com.algaworks.desafio_io.io;
 
-import java.io.File;
-import java.io.FileInputStream;
-import java.io.FileOutputStream;
-import java.io.IOException;
-import java.io.InputStream;
-import java.io.OutputStream;
+import java.io.*;
+import java.nio.file.Path;
 import java.util.Objects;
 
 public class FragmentadorDeArquivo {
-    
+
     private final File arquivo;
     private final int tamanhoFragmento;
 
-
     public FragmentadorDeArquivo(File arquivo, int tamanhoFragmento) {
         Objects.requireNonNull(arquivo);
-
         if (tamanhoFragmento < 1) {
-            throw new IllegalArgumentException("O tamanho do fragmento deve ser a partir de 1 byte.");
+            throw new IllegalArgumentException("Tamanho do fragmento deve ser a partir de 1 byte");
         }
 
         this.arquivo = arquivo;
         this.tamanhoFragmento = tamanhoFragmento;
+    }
+
+    public FragmentadorDeArquivo(Path of, int tamanhoFragmento2) {
+        Objects.requireNonNull(of);
+        if (tamanhoFragmento2 < 1) {
+            throw new IllegalArgumentException("Tamanho do fragmento deve ser a partir de 1 byte");
+        }
+
+        this.arquivo = of.toFile();
+        this.tamanhoFragmento = tamanhoFragmento2;
     }
 
     public void fragmentar() throws IOException {
@@ -37,7 +41,6 @@ public class FragmentadorDeArquivo {
             }
         }
     }
-
 
     private int lerFragmento(InputStream inputStream, byte[] conteudo) throws IOException {
         return inputStream.read(conteudo);
