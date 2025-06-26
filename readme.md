@@ -28,3 +28,9 @@ NÃO ARMAZENA OS ELEMENTOS, ELE É APENAS UMA FORMA DE PROCESSAR OS ELEMENTOS DA
 ### serialVersionUID:
 
 
+
+
+
+### SLF4J:
+
+Não consegui puxar a dependencia mas quando criar um projeto Spring Boot, eu conseguiria pegar a dependencia.

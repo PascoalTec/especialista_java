@@ -1,12 +1,12 @@
 package com.algaworks.banco_app;
 
+import java.math.BigDecimal;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 import com.algaworks.banco_app.negocio.ContaCorrente;
 import com.algaworks.banco_app.negocio.SaldoInsuficienteException;
 import com.algaworks.banco_app.negocio.Titular;
 
-import java.math.BigDecimal;
-import java.util.logging.Level;
-import java.util.logging.Logger;
 
 public class Principal {
 
