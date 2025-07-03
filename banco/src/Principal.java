@@ -6,6 +6,8 @@ public class Principal {
     public static void main(String[] args) {
         DayOfWeek diaDaSemana = LocalDate.now().getDayOfWeek();
         System.out.println(diaDaSemana);
+
+        System.out.println("teste");
     }
     
     
