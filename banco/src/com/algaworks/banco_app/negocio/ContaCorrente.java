@@ -1,7 +1,6 @@
 package com.algaworks.banco_app.negocio;
 
 import java.math.BigDecimal;
-import java.time.LocalDateTime;
 import java.util.Objects;
 import java.util.logging.Level;
 import java.util.logging.Logger;

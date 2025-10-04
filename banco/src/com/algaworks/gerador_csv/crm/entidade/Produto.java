@@ -1,3 +1,7 @@
+package com.algaworks.gerador_csv.crm.entidade;
+
+import java.math.BigDecimal;
+
 public class Produto {
 
     private final Long codigo;

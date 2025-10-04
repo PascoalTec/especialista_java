@@ -1,3 +1,11 @@
+package com.algaworks.gerador_csv.crm;
+
+import java.math.BigDecimal;
+import java.util.Arrays;
+
+import com.algaworks.gerador_csv.arquivo.GeradorCSV;
+import com.algaworks.gerador_csv.crm.entidade.Produto;
+
 public class Principal2 {
 
     public static void main(String[] args) {

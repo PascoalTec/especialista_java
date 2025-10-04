@@ -1,3 +1,5 @@
+package com.algaworks.comercial.repositorio;
+
 public class PersistenciaException extends RuntimeException {
 
     public PersistenciaException(String message) {

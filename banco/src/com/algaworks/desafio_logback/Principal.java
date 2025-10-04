@@ -1,7 +1,7 @@
 package com.algaworks.desafio_logback;
 
-import java.nio.file.Path;
-import java.util.logging.Logger;
+// import java.nio.file.Path;
+// import java.util.logging.Logger;
 
 //import com.algaworks.desafio_logback.fragmentador.FragmentadorDeArquivo;
 

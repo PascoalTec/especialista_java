@@ -1,8 +1,10 @@
-import com.algaworks.comercial.entidade.Venda;
-import com.algaworks.comercial.repositorio.VendaRepositorio;
+package com.algaworks.comercial.servico;
 
 import java.math.BigDecimal;
 import java.time.LocalDate;
+
+import com.algaworks.comercial.entidade.Venda;
+import com.algaworks.comercial.repositorio.VendaRepositorio;
 
 public class CadastroVendaServico {
 

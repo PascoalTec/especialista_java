@@ -1,3 +1,5 @@
+package com.algaworks.comercial;
+
 import com.algaworks.comercial.entidade.Venda;
 import com.algaworks.comercial.repositorio.FabricaDeRepositorio;
 import com.algaworks.comercial.repositorio.VendaRepositorio;
@@ -10,7 +12,7 @@ import java.time.LocalDate;
 public class Principal {
 
     public static void main(String[] args) throws SQLException {
-        try (var fabricaDeRepositorio = new FabricaDeRepositorio()) {
+    try (var fabricaDeRepositorio = FabricaDeRepositorio.obterInstancia()) {
             VendaRepositorio vendaRepositorio = fabricaDeRepositorio.criarVendaRepositorio();
             var cadastroVendaServico = new CadastroVendaServico(vendaRepositorio);
             Venda vendaCadastrada = cadastroVendaServico.cadastrar("José da Silva",

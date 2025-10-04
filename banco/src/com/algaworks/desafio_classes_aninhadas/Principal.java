@@ -9,6 +9,7 @@ import com.algaworks.desafio_classes_aninhadas.vendas.Pedido;
 
 public class Principal {
 
+    @SuppressWarnings("deprecation")
     private final static NumberFormat FORMATADOR_MOEDA = NumberFormat.getCurrencyInstance(
             new Locale("pt", "BR"));
 

@@ -1,7 +1,4 @@
-import com.algaworks.financeira.modelo.ClienteFinanciavel;
-import com.algaworks.financeira.modelo.Fazenda;
 import com.algaworks.financeira.modelo.Funcionario;
-import com.algaworks.financeira.modelo.PessoaBonificavel;
 import com.algaworks.financeira.servico.ServicoPagamentoBonus;
 
 public class Principal2 {

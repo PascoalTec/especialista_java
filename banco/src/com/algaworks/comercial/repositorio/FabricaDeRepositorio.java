@@ -1,8 +1,10 @@
-import com.algaworks.comercial.repositorio.mysql.MySQLVendaRepositorio;
+package com.algaworks.comercial.repositorio;
 
-import java.sql.Connection;
-import java.sql.DriverManager;
-import java.sql.SQLException;
+import com.algaworks.comercial.repositorio.mysql.MySQLFabricaDeRepositorio;
+import com.algaworks.comercial.repositorio.memoria.MemoriaFabricaDeRepositorio;
+
+import java.io.IOException;
+import java.util.Properties;
 
 public interface FabricaDeRepositorio extends AutoCloseable {
 
@@ -10,6 +12,9 @@ public interface FabricaDeRepositorio extends AutoCloseable {
         var properties = new Properties();
         try (var is = FabricaDeRepositorio.class
                 .getResourceAsStream("/persistencia.properties")) {
+            if (is == null) {
+                throw new PersistenciaException("Arquivo persistencia.properties não encontrado");
+            }
             properties.load(is);
         } catch (IOException e) {
             throw new PersistenciaException("Erro carregando configurações", e);

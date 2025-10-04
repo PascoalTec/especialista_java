@@ -14,6 +14,7 @@ public class ConviteFesta {
     private static final Scanner ENTRADA = new Scanner(System.in);
     private static final DateTimeFormatter FORMATADOR_DATA = DateTimeFormatter.ofPattern("dd/MM/yyyy");
     private static final DateTimeFormatter FORMATADOR_HORARIO = DateTimeFormatter.ofPattern("HH:mm");
+    @SuppressWarnings("deprecation")
     private static final DateTimeFormatter FORMATADOR_COMPLETO = DateTimeFormatter
             .ofPattern("dd 'de' MMMM 'de' yyyy 'às' HH:mm (zzzz)")
             .withLocale(new Locale("pt", "BR"));
